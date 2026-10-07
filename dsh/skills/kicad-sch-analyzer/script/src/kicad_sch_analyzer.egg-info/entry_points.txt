@@ -1,0 +1,2 @@
+[console_scripts]
+kicad-sch-analyzer = kicad_sch_analyzer.__main__:main

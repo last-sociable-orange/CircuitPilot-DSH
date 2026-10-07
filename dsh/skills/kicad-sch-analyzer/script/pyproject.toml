@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kicad-sch-analyzer"
+version = "0.1.0"
+description = "High-level KiCad schematic analysis tool — list components, nets, and pin connections"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "kicad-skip",
+]
+
+[project.urls]
+Source = "https://github.com/circuithub/kicad-sch-analyzer"
+
+[project.scripts]
+kicad-sch-analyzer = "kicad_sch_analyzer.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+kicad-skip = { path = "../kicad-skip", editable = true }
