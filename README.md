@@ -9,7 +9,9 @@ DSH's own project conventions, so one installed bundle serves every hardware pro
 
 ## Enable it
 
-`dsh-circuitpilot` is installed as a dsh plugin. It sits in `~/.dsh/circuitpilot/` folder. After installation, you can go to:
+`dsh-circuitpilot` is installed as a dsh plugin. It sits in `~/.dsh/circuitpilot/` folder. 
+Simply copy `circuitpilot` folder to this destination. Then install it through dsh `Plugins -> Add plugin`
+button and enter `C:\Users\your_user_name\.dsh\circuitpilot` in the installation text box. After installation, you can go to:
 
 **Settings ▸ General ▸ Agent preset** → choose **CircuitPilot** for new tasks, or pick it from
 the new-task preset picker. Existing sessions keep the preset they were created with, so select
