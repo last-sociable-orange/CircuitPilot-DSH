@@ -1,22 +1,23 @@
 # ============================================================================
 # CircuitPilot — a DSH agent preset that replicates the Pi "CircuitPilot" setup
 # ----------------------------------------------------------------------------
-#   Pi (project-local)                     ->  DSH (this preset)
+#   Pi (project-local)                     ->  DSH (this bundle)
 #     AGENTS.md (lead prompt)              ->  AGENTS.md, via dsh-agent-instructions
-#     .pi/agents/worker.md   (:high)       ->  subagent_worker   (high)
-#     .pi/agents/designer.md (:high)       ->  subagent_designer (high)
-#     .pi/agents/reviewer.md (:high)       ->  subagent_reviewer (high)
+#     .pi/agents/{worker,designer,reviewer}.md
+#                                          ->  <project>/.dsh/agents/*.md, read by
+#                                              the child itself; the bundle only
+#                                              wires the delegation tools
 #     .pi/extensions/subagents/            ->  the tool-subagent rows below
 #     .pi/skills/                          ->  .dsh/skills/  (discovered automatically)
 #
-# NO PROJECT PATHS APPEAR ANYWHERE IN THIS FILE.
+# NO PROJECT PATHS APPEAR ANYWHERE IN THIS FILE, AND NO ROLE TEXT EITHER.
 #
 #   * Role prompts are read by each child agent at delegation time, from
 #     `<workspace>/.dsh/agents/<role>.md` — the child inherits the delegating
 #     session's working directory, so this resolves per project with no
-#     configuration. That is also why this file needs no `persona` reads.
+#     configuration. Adding or rewriting a role is a Markdown edit.
 #   * Skills come from the project-root convention `<projectRoot>/.dsh/skills`
-#     that `dsh-skill-filesystem` already scans by default.
+#     that `dsh-skill-filesystem` scans by default (`includeDefaultRoots`).
 #   * `AGENTS.md` is loaded from the project root by `dsh-agent-instructions`.
 #
 # Deploying to a new hardware project is therefore file-only: give it an
@@ -25,9 +26,38 @@
 #
 # A patch replaces the targeted row's whole `config`; this file only INSERTS, so
 # nothing shipped by dsh-base / dsh-web-app changes.
+#
+# ----------------------------------------------------------------------------
+# DSH 0.2.2 shape (migrated from the 0.2.0-era patch; see the bundle README):
+#
+#   1. `@deepseek-ai/dsh-tool-subagent` no longer accepts `persona` or
+#      `toolFilter` (upgrade guide v0.2.1-alpha.1/subagent-preset-composition).
+#      There is therefore NO per-child composition here: a spawn child with no
+#      `agentPreset` joins the parent's active revision, so every delegated
+#      sub-agent runs this same preset.
+#
+#      ROLE ASSIGNMENT IS A MARKDOWN ACT. The lead names the role-definition
+#      file in each task (`<project>/.dsh/agents/<role>.md`) and the child adopts
+#      it; AGENTS.md carries the matching "if you are a sub-agent" paragraph, so
+#      the inherited lead composition is reconciled in prose instead of in the
+#      composition. Adding a role is a Markdown edit and a row in AGENTS.md.
+#   2. `backgroundMode` / `enableRunInBackground` are gone
+#      (v0.2.1-alpha.1/subagent-activations): every delegation is a managed
+#      activation that reports back through a completion notice.
+#   3. `dsh-tool-subagent-control` registers `send_message`, `interrupt_agent`,
+#      `wait_agent` and `list_agents` together, and its `/list-agents` export is
+#      removed (v0.2.1-rc.1/subagent-control-tools). One row replaces the old
+#      pair, with `interrupt: false` as the shipped presets use
+#      (v0.2.2-rc.1/subagent-interrupt-default).
+#   4. `dsh-persona` interpolates `{{variable}}` strictly and only `provider` and
+#      `model` are registered by the agent loop, so the old
+#      `Your working directory is {{cwd}}.` suffix failed prompt assembly on
+#      every turn. The working directory reaches the agent as runtime context
+#      from `dsh-working-directory` instead.
 # ============================================================================
 
 - insert:
+    # ── Lead ────────────────────────────────────────────────────────────────
     - id: preset-circuitpilot
       name: '@deepseek-ai/dsh-agent-preset'
       config:
@@ -40,17 +70,22 @@
         order: 2
         plugins:
           # ── identity ────────────────────────────────────────────────────────
-          # Deliberately short: the real instructions live in the project's
-          # AGENTS.md, loaded by the agent-instructions row below.
-          - id: persona
-            name: '@deepseek-ai/dsh-persona'
+          # The role section below is the only identity text, and it resolves per
+          # assembling agent (`dsh-circuitpilot/role-persona`):
+          #   lead (root)      -> empty, so the section renders away; the lead's
+          #                       instructions are the project's AGENTS.md.
+          #   delegated child  -> the contents of `.dsh/agents/<child name>.md`,
+          #                       i.e. its own prompt, injected at creation.
+          # No `dsh-persona` row: this profile also runs `dsh-agent-persona`,
+          # which owns the persona slot per agent and can replace it.
+
+          # Injects the role file above. Reads the child's working directory and
+          # the agent name the lead assigned, so the Markdown stays the only
+          # place a role is defined.
+          - id: role-persona
+            name: 'dsh-circuitpilot/role-persona'
             config:
-              prefix: >-
-                You are CircuitPilot, the lead agent of a hardware (electronics)
-                design team. Follow the workspace instructions in AGENTS.md, which
-                define your sub-agents and the delegation rules.
-              suffix: >-
-                Your working directory is {{cwd}}.
+              roleDir: .dsh/agents
 
           # ── AGENTS.md at the project root is the lead agent's prompt ────────
           - id: agent-instructions
@@ -61,10 +96,10 @@
           # ── Lead toolset ────────────────────────────────────────────────────
           - id: tool-bash
             name: '@deepseek-ai/dsh-tool-bash'
-            disabled: !<tag:yaml.org,2002:js> process.platform === 'win32'
+            disabled: !!js process.platform === 'win32'
           - id: tool-pwsh
             name: '@deepseek-ai/dsh-tool-pwsh'
-            disabled: !<tag:yaml.org,2002:js> process.platform !== 'win32'
+            disabled: !!js process.platform !== 'win32'
           - id: tool-fs
             name: '@deepseek-ai/dsh-tool-fs'
           - id: tool-fs-search
@@ -95,7 +130,7 @@
                 name: '@deepseek-ai/dsh-plan-mode'
                 config:
                   section: |
-                    You are in plan mode. Stay in plan mode until exit_plan_mode succeeds or the user switches the session mode. Imperative language to implement changes means plan the implementation, not execute it. A user's conversational agreement — including an answer confirming something you asked — approves nothing and does not end plan mode; fold the confirmed decision into the plan and submit it through exit_plan_mode.
+                    You are in plan mode. Stay in plan mode until the user approves your plan through exit_plan_mode or switches the session mode. Imperative language to implement changes means plan the implementation, not execute it. A user's conversational agreement — including an answer confirming something you asked — approves nothing and does not end plan mode; fold the confirmed decision into the plan and submit it through exit_plan_mode.
 
                     Explore first. Use non-mutating reads, searches, static analysis, and checks to ground the plan in the actual repository. Do not edit or write files, change configuration, run formatters or code generation that rewrites tracked files, commit, or otherwise carry out the plan. Prefer existing functions and patterns over new machinery.
 
@@ -105,7 +140,7 @@
 
                     Make the plan decision-complete: state the goal and success criteria; group implementation changes by subsystem; identify public API, schema, and data-flow changes; cover edge cases, failure modes, tests, acceptance criteria, and explicit assumptions. Keep it concise enough to review but detailed enough that another engineer can implement it without making design decisions.
 
-                    When ready, call exit_plan_mode with the complete plan markdown, starting with a # title. Make exit_plan_mode the only and final tool call in that assistant response: it presents the plan for approval, and implementation begins only in a later step after approval. Do not paste the final plan as a plain reply or ask the user "should I proceed?" through prose or ask_user_question. If review rejects it, incorporate the feedback and present again. If the review channel is unavailable or aborted, stay in plan mode and ask the user to switch modes manually; do not proceed with implementation.
+                    When ready, call exit_plan_mode with the complete plan markdown, starting with a # title. Make exit_plan_mode the only and final tool call in that assistant response: it presents the plan for approval, and implementation begins only in a later step after approval. Do not paste the final plan as a plain reply or ask "should I proceed?" through prose or ask_user_question. If review rejects it, incorporate the feedback and present again. If the review channel is unavailable or aborted, stay in plan mode and ask the user to switch modes manually; do not proceed with implementation.
           - id: compaction
             name: cordis:group
             group: true
@@ -126,46 +161,33 @@
 
           # ── Delegation: 1 generic + 3 named sub-agents ──────────────────────
           #
-          # Each named agent is one `tool-subagent` row. The row fixes the
-          # agent's model and thinking level (Pi's `model:` frontmatter); the
-          # persona is fixed and project-independent, and it makes the child load
-          # its role definition from the project before working:
-          #
-          #     <workspace>/.dsh/agents/worker.md
-          #
-          # The child inherits this session's working directory, so one preset
-          # serves every hardware project.
+          # Four `tool-subagent` rows over the `spawn` provider. A row fixes only
+          # the model-facing tool name and, for the named ones, the model and
+          # thinking level (Pi's `model:` frontmatter). No row selects or
+          # describes a role: the child joins this preset's revision and the lead
+          # assigns the role by naming `.dsh/agents/<role>.md` in the task.
           - id: delegation
             name: cordis:group
             group: true
             isolate:
               workflowEngine: true
             config:
-              - id: subagent-control
+              - id: tool-subagent-control
                 name: '@deepseek-ai/dsh-tool-subagent-control'
-              - id: subagent-list-agents
-                name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
+                config:
+                  interrupt: false
 
               - id: tool-subagent
                 name: '@deepseek-ai/dsh-tool-subagent'
                 config:
                   provider: spawn
                   toolName: subagent
-                  backgroundMode: continuable
 
               - id: subagent-worker
                 name: '@deepseek-ai/dsh-tool-subagent'
                 config:
                   provider: spawn
                   toolName: subagent_worker
-                  backgroundMode: continuable
-                  persona: >-
-                    You are the WORKER agent of a hardware design team. Before doing
-                    anything else, read the file `.dsh/agents/worker.md` in your working
-                    directory and adopt it as your role definition; it is authoritative
-                    and overrides any assumption you would otherwise make about this
-                    job. If that file is missing, say so and stop. Then carry out the
-                    task exactly as that definition and the delegating lead describe.
                   agentOptions:
                     provider: deepseek-account
                     model: deepseek-flash
@@ -176,14 +198,6 @@
                 config:
                   provider: spawn
                   toolName: subagent_designer
-                  backgroundMode: continuable
-                  persona: >-
-                    You are the DESIGNER agent of a hardware design team. Before doing
-                    anything else, read the file `.dsh/agents/designer.md` in your working
-                    directory and adopt it as your role definition; it is authoritative
-                    and overrides any assumption you would otherwise make about this
-                    job. If that file is missing, say so and stop. Then carry out the
-                    task exactly as that definition and the delegating lead describe.
                   agentOptions:
                     provider: deepseek-account
                     model: deepseek-flash
@@ -194,14 +208,6 @@
                 config:
                   provider: spawn
                   toolName: subagent_reviewer
-                  backgroundMode: continuable
-                  persona: >-
-                    You are the REVIEWER agent of a hardware design team. Before doing
-                    anything else, read the file `.dsh/agents/reviewer.md` in your working
-                    directory and adopt it as your role definition; it is authoritative
-                    and overrides any assumption you would otherwise make about this
-                    job. If that file is missing, say so and stop. Then carry out the
-                    task exactly as that definition and the delegating lead describe.
                   agentOptions:
                     provider: deepseek-account
                     model: deepseek-flash
@@ -223,4 +229,9 @@
             name: '@deepseek-ai/dsh-tool-present'
           - id: tool-plugin-manager
             name: '@deepseek-ai/dsh-plugin-manager/tools'
-            disabled: !<tag:yaml.org,2002:js> "!ctx.get('profileContext')"
+            disabled: !!js "!ctx.get('profileContext')"
+
+    # No second preset on purpose. A delegated child joins this revision, so the
+    # child inherits this toolset and the lead persona; the role it plays is the
+    # Markdown file the lead names in the task, reconciled by the
+    # "if you are a sub-agent" paragraph in the project's AGENTS.md.

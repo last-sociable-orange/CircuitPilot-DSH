@@ -1,16 +1,20 @@
 {
   "name": "dsh-circuitpilot",
-  "version": "1.1.0",
+  "version": "1.3.1",
   "private": true,
   "description": "CircuitPilot agent preset for DSH: hardware project lead, worker/designer/reviewer sub-agents, and the shared KiCad skills.",
   "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./role-persona": "./role-persona.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "index.js",
+    "role-persona.js",
     "cordis.patch.yml",
-    "README.md",
-    "deploy.mjs",
-    "scaffold"
+    "README.md"
   ],
   "dsh": {
     "bundle": {
