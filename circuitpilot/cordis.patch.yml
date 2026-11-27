@@ -213,6 +213,19 @@
                     model: deepseek-flash
                     reasoningEffort: high
 
+              # CAD: netlist -> KiCad schematic pages. Never writes schematic text;
+              # drives the vendored KiCAD-MCP server through the kicad-sch-build skill
+              # and is accepted only when KiCad's own netlist read-back matches.
+              - id: subagent-cad
+                name: '@deepseek-ai/dsh-tool-subagent'
+                config:
+                  provider: spawn
+                  toolName: subagent_cad
+                  agentOptions:
+                    provider: deepseek-account
+                    model: deepseek-flash
+                    reasoningEffort: high
+
           # ── Remaining standard toolset ──────────────────────────────────────
           - id: tool-ask-user
             name: '@deepseek-ai/dsh-tool-ask-user'

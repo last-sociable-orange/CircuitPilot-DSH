@@ -1,0 +1,13 @@
+# Lint settings for this skill.
+#
+# `scripts/lcsc_client/` is a verbatim copy of the KiCad LibGen LCSC storefront
+# client (see scripts/lcsc_client/README.md): it is linted in its source project
+# and refreshed with scripts/refresh_client.py, so linting a copy here would only
+# report style differences that must not be "fixed" by hand.
+
+target-version = "py310"
+line-length = 100
+extend-exclude = ["scripts/lcsc_client"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP", "C4", "SIM"]

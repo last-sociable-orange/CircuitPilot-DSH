@@ -1,0 +1,15 @@
+# Lint settings for this skill (standard library only, Python 3.10+).
+
+target-version = "py310"
+line-length = 100
+extend-exclude = [".tmp", "tests/fixtures"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP", "C4", "SIM", "RUF"]
+ignore = [
+    "E501",   # long lines are allowed where they keep a format string readable
+    "RUF001", # Ω, ±, ℃ and 厚声 in part data are legitimate
+    "RUF002",
+    "RUF003",
+    "SIM102",
+]
