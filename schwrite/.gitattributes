@@ -1,0 +1,6 @@
+# KiCad pages and fixtures are compared byte-for-byte in the golden tests, so line
+# endings must survive a clone: LF everywhere, no CRLF translation.
+* text=auto eol=lf
+*.kicad_sch text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_dbl text eol=lf

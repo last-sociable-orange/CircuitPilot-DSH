@@ -1,0 +1,324 @@
+{
+  "design": "MCB-01",
+  "subsystem": "Channel_1-4",
+  "source": "HW-DD-MCB-001 V3.4 sections 7 (PCB and EMC) and 8.3 (interconnect); SPEC.md section 7 - channel interfaces, channels n = 1-4",
+  "components": [
+    { "ref": "J1", "lcsc": "C53151845", "value": "HC-0.6-5PWT" },
+    { "ref": "FB1", "lcsc": "C21519", "value": "MPZ2012S601AT000" },
+    { "ref": "C38", "lcsc": "C5448891", "value": "10uF" },
+    { "ref": "C46", "lcsc": "C5350800", "value": "100nF" },
+    { "ref": "D4", "lcsc": "C558418", "value": "SRV05-4" },
+    { "ref": "D12", "lcsc": "C5137779", "value": "ES06D1HA03" },
+    { "ref": "R35", "lcsc": "C2906868", "value": "33R" },
+    { "ref": "R36", "lcsc": "C2906868", "value": "33R" },
+
+    { "ref": "J2", "lcsc": "C53151845", "value": "HC-0.6-5PWT" },
+    { "ref": "FB2", "lcsc": "C21519", "value": "MPZ2012S601AT000" },
+    { "ref": "C39", "lcsc": "C5448891", "value": "10uF" },
+    { "ref": "C47", "lcsc": "C5350800", "value": "100nF" },
+    { "ref": "D5", "lcsc": "C558418", "value": "SRV05-4" },
+    { "ref": "D13", "lcsc": "C5137779", "value": "ES06D1HA03" },
+    { "ref": "R37", "lcsc": "C2906868", "value": "33R" },
+    { "ref": "R38", "lcsc": "C2906868", "value": "33R" },
+
+    { "ref": "J3", "lcsc": "C53151845", "value": "HC-0.6-5PWT" },
+    { "ref": "FB3", "lcsc": "C21519", "value": "MPZ2012S601AT000" },
+    { "ref": "C40", "lcsc": "C5448891", "value": "10uF" },
+    { "ref": "C48", "lcsc": "C5350800", "value": "100nF" },
+    { "ref": "D6", "lcsc": "C558418", "value": "SRV05-4" },
+    { "ref": "D14", "lcsc": "C5137779", "value": "ES06D1HA03" },
+    { "ref": "R39", "lcsc": "C2906868", "value": "33R" },
+    { "ref": "R40", "lcsc": "C2906868", "value": "33R" },
+
+    { "ref": "J4", "lcsc": "C53151845", "value": "HC-0.6-5PWT" },
+    { "ref": "FB4", "lcsc": "C21519", "value": "MPZ2012S601AT000" },
+    { "ref": "C41", "lcsc": "C5448891", "value": "10uF" },
+    { "ref": "C49", "lcsc": "C5350800", "value": "100nF" },
+    { "ref": "D7", "lcsc": "C558418", "value": "SRV05-4" },
+    { "ref": "D15", "lcsc": "C5137779", "value": "ES06D1HA03" },
+    { "ref": "R41", "lcsc": "C2906868", "value": "33R" },
+    { "ref": "R42", "lcsc": "C2906868", "value": "33R" }
+  ],
+  "nets": [
+    {
+      "name": "3V3",
+      "class": "power",
+      "members": [
+        { "ref": "D4", "pin": "5" },
+        { "ref": "D5", "pin": "5" },
+        { "ref": "D6", "pin": "5" },
+        { "ref": "D7", "pin": "5" }
+      ]
+    },
+    {
+      "name": "GND",
+      "class": "power",
+      "members": [
+        { "ref": "J1", "pin": "2" },
+        { "ref": "J1", "pin": "6" },
+        { "ref": "J1", "pin": "7" },
+        { "ref": "C38", "pin": "2" },
+        { "ref": "C46", "pin": "2" },
+        { "ref": "D12", "pin": "2" },
+        { "ref": "D4", "pin": "2" },
+        { "ref": "J2", "pin": "2" },
+        { "ref": "J2", "pin": "6" },
+        { "ref": "J2", "pin": "7" },
+        { "ref": "C39", "pin": "2" },
+        { "ref": "C47", "pin": "2" },
+        { "ref": "D13", "pin": "2" },
+        { "ref": "D5", "pin": "2" },
+        { "ref": "J3", "pin": "2" },
+        { "ref": "J3", "pin": "6" },
+        { "ref": "J3", "pin": "7" },
+        { "ref": "C40", "pin": "2" },
+        { "ref": "C48", "pin": "2" },
+        { "ref": "D14", "pin": "2" },
+        { "ref": "D6", "pin": "2" },
+        { "ref": "J4", "pin": "2" },
+        { "ref": "J4", "pin": "6" },
+        { "ref": "J4", "pin": "7" },
+        { "ref": "C41", "pin": "2" },
+        { "ref": "C49", "pin": "2" },
+        { "ref": "D15", "pin": "2" },
+        { "ref": "D7", "pin": "2" }
+      ]
+    },
+
+    {
+      "name": "5V_CH1_SW",
+      "class": "power",
+      "members": [
+        { "ref": "FB1", "pin": "1" }
+      ]
+    },
+    {
+      "name": "5V_CH1",
+      "class": "power",
+      "members": [
+        { "ref": "FB1", "pin": "2" },
+        { "ref": "C38", "pin": "1" },
+        { "ref": "C46", "pin": "1" },
+        { "ref": "D12", "pin": "1" },
+        { "ref": "J1", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH1_RX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "J1", "pin": "3" },
+        { "ref": "D4", "pin": "1" },
+        { "ref": "R35", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH1_RX",
+      "class": "signal",
+      "members": [
+        { "ref": "R35", "pin": "2" }
+      ]
+    },
+    {
+      "name": "CH1_TX",
+      "class": "signal",
+      "members": [
+        { "ref": "R36", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH1_TX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "R36", "pin": "2" },
+        { "ref": "D4", "pin": "3" },
+        { "ref": "J1", "pin": "4" }
+      ]
+    },
+    {
+      "name": "SYNC_CH1",
+      "class": "signal",
+      "members": [
+        { "ref": "D4", "pin": "6" },
+        { "ref": "J1", "pin": "5" }
+      ]
+    },
+
+    {
+      "name": "5V_CH2_SW",
+      "class": "power",
+      "members": [
+        { "ref": "FB2", "pin": "1" }
+      ]
+    },
+    {
+      "name": "5V_CH2",
+      "class": "power",
+      "members": [
+        { "ref": "FB2", "pin": "2" },
+        { "ref": "C39", "pin": "1" },
+        { "ref": "C47", "pin": "1" },
+        { "ref": "D13", "pin": "1" },
+        { "ref": "J2", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH2_RX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "J2", "pin": "3" },
+        { "ref": "D5", "pin": "1" },
+        { "ref": "R37", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH2_RX",
+      "class": "signal",
+      "members": [
+        { "ref": "R37", "pin": "2" }
+      ]
+    },
+    {
+      "name": "CH2_TX",
+      "class": "signal",
+      "members": [
+        { "ref": "R38", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH2_TX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "R38", "pin": "2" },
+        { "ref": "D5", "pin": "3" },
+        { "ref": "J2", "pin": "4" }
+      ]
+    },
+    {
+      "name": "SYNC_CH2",
+      "class": "signal",
+      "members": [
+        { "ref": "D5", "pin": "6" },
+        { "ref": "J2", "pin": "5" }
+      ]
+    },
+
+    {
+      "name": "5V_CH3_SW",
+      "class": "power",
+      "members": [
+        { "ref": "FB3", "pin": "1" }
+      ]
+    },
+    {
+      "name": "5V_CH3",
+      "class": "power",
+      "members": [
+        { "ref": "FB3", "pin": "2" },
+        { "ref": "C40", "pin": "1" },
+        { "ref": "C48", "pin": "1" },
+        { "ref": "D14", "pin": "1" },
+        { "ref": "J3", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH3_RX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "J3", "pin": "3" },
+        { "ref": "D6", "pin": "1" },
+        { "ref": "R39", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH3_RX",
+      "class": "signal",
+      "members": [
+        { "ref": "R39", "pin": "2" }
+      ]
+    },
+    {
+      "name": "CH3_TX",
+      "class": "signal",
+      "members": [
+        { "ref": "R40", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH3_TX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "R40", "pin": "2" },
+        { "ref": "D6", "pin": "3" },
+        { "ref": "J3", "pin": "4" }
+      ]
+    },
+    {
+      "name": "SYNC_CH3",
+      "class": "signal",
+      "members": [
+        { "ref": "D6", "pin": "6" },
+        { "ref": "J3", "pin": "5" }
+      ]
+    },
+
+    {
+      "name": "5V_CH4_SW",
+      "class": "power",
+      "members": [
+        { "ref": "FB4", "pin": "1" }
+      ]
+    },
+    {
+      "name": "5V_CH4",
+      "class": "power",
+      "members": [
+        { "ref": "FB4", "pin": "2" },
+        { "ref": "C41", "pin": "1" },
+        { "ref": "C49", "pin": "1" },
+        { "ref": "D15", "pin": "1" },
+        { "ref": "J4", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH4_RX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "J4", "pin": "3" },
+        { "ref": "D7", "pin": "1" },
+        { "ref": "R41", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH4_RX",
+      "class": "signal",
+      "members": [
+        { "ref": "R41", "pin": "2" }
+      ]
+    },
+    {
+      "name": "CH4_TX",
+      "class": "signal",
+      "members": [
+        { "ref": "R42", "pin": "1" }
+      ]
+    },
+    {
+      "name": "CH4_TX_P",
+      "class": "signal",
+      "members": [
+        { "ref": "R42", "pin": "2" },
+        { "ref": "D7", "pin": "3" },
+        { "ref": "J4", "pin": "4" }
+      ]
+    },
+    {
+      "name": "SYNC_CH4",
+      "class": "signal",
+      "members": [
+        { "ref": "D7", "pin": "6" },
+        { "ref": "J4", "pin": "5" }
+      ]
+    }
+  ]
+}

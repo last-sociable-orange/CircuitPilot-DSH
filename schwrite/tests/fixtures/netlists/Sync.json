@@ -1,0 +1,335 @@
+{
+  "design": "MCB-01",
+  "subsystem": "Sync",
+  "source": "HW-DD-MCB-001 V3.4 §3.4, §3.5",
+  "components": [
+    {
+      "ref": "U6",
+      "lcsc": "C7394030"
+    },
+    {
+      "ref": "R51",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R52",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R53",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R54",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R55",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R56",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R57",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R58",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R59",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "R60",
+      "lcsc": "C25744",
+      "value": "10k"
+    },
+    {
+      "ref": "R61",
+      "lcsc": "C2906860",
+      "value": "100R"
+    },
+    {
+      "ref": "C54",
+      "lcsc": "C106200",
+      "value": "100pF"
+    },
+    {
+      "ref": "C55",
+      "lcsc": "C5350800",
+      "value": "100nF"
+    },
+    {
+      "ref": "J11",
+      "lcsc": "C53055380"
+    },
+    {
+      "ref": "C13",
+      "lcsc": "C5350800",
+      "value": "100nF"
+    }
+  ],
+  "nets": [
+    {
+      "name": "SYNC",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U6",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_EN",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_DIST",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U6",
+          "pin": "4"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "R58",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH1",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R51",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH2",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R52",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH3",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R53",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH4",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R54",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH5",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R55",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH6",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R56",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH7",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R57",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_CH8",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R58",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "3V3",
+      "class": "power",
+      "members": [
+        {
+          "ref": "U6",
+          "pin": "5"
+        },
+        {
+          "ref": "R61",
+          "pin": "1"
+        },
+        {
+          "ref": "C13",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "class": "power",
+      "members": [
+        {
+          "ref": "U6",
+          "pin": "3"
+        },
+        {
+          "ref": "C54",
+          "pin": "2"
+        },
+        {
+          "ref": "C55",
+          "pin": "2"
+        },
+        {
+          "ref": "R60",
+          "pin": "2"
+        },
+        {
+          "ref": "J11",
+          "pin": "2"
+        },
+        {
+          "ref": "J11",
+          "pin": "4"
+        },
+        {
+          "ref": "J11",
+          "pin": "5"
+        },
+        {
+          "ref": "C13",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_IN_RAW",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "J11",
+          "pin": "1"
+        },
+        {
+          "ref": "R59",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "SYNC_IN",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R59",
+          "pin": "2"
+        },
+        {
+          "ref": "R60",
+          "pin": "1"
+        },
+        {
+          "ref": "C54",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "3V3_EXT",
+      "class": "power",
+      "members": [
+        {
+          "ref": "R61",
+          "pin": "2"
+        },
+        {
+          "ref": "C55",
+          "pin": "1"
+        },
+        {
+          "ref": "J11",
+          "pin": "3"
+        }
+      ]
+    }
+  ]
+}

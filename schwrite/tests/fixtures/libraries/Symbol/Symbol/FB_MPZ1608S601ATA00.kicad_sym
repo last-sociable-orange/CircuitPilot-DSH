@@ -1,0 +1,93 @@
+(kicad_symbol_lib
+	(version 20251024)
+	(generator "lcsc-libs")
+	(generator_version "10.0")
+	(symbol "FB_MPZ1608S601ATA00"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "FB"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MPZ1608S601ATA00"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "FB_MPZ1608S601ATA00_0_1"
+		)
+		(symbol "FB_MPZ1608S601ATA00_1_1"
+			(pin passive line
+				(at 5.08 0 180)
+				(length 0.762)
+				(name "2" (effects (font (size 0 0))))
+				(number "2" (effects (font (size 0 0))))
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 0.762)
+				(name "1" (effects (font (size 0 0))))
+				(number "1" (effects (font (size 0 0))))
+			)
+		
+			(polyline (pts (xy -4.2883 0.0173) (xy -2.2652 0.0163) ) (stroke (width 0.254) (type dash) ) (fill (type none) ) )
+			(polyline (pts (xy -2.1336 0.018) (xy -0.1105 0.0168) ) (stroke (width 0.254) (type dash) ) (fill (type none) ) )
+			(polyline (pts (xy 0.017 0.018) (xy 2.0401 0.0168) ) (stroke (width 0.254) (type dash) ) (fill (type none) ) )
+			(polyline (pts (xy 2.2098 0.0175) (xy 4.2329 0.0163) ) (stroke (width 0.254) (type dash) ) (fill (type none) ) ))
+		(embedded_fonts no)
+	)
+)

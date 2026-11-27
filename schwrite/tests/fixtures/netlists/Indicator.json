@@ -1,0 +1,748 @@
+{
+  "design": "MCB-01",
+  "subsystem": "Indicator",
+  "source": "HW-DD-MCB-001 V3.4 §6.1, §8.3",
+  "components": [
+    {
+      "ref": "U7",
+      "lcsc": "C2891574"
+    },
+    {
+      "ref": "FB10",
+      "lcsc": "C21519"
+    },
+    {
+      "ref": "C56",
+      "lcsc": "C5350800",
+      "value": "100nF"
+    },
+    {
+      "ref": "C57",
+      "lcsc": "C20070242",
+      "value": "1uF"
+    },
+    {
+      "ref": "C58",
+      "lcsc": "C20070242",
+      "value": "1uF"
+    },
+    {
+      "ref": "R62",
+      "lcsc": "C140179",
+      "value": "22k"
+    },
+    {
+      "ref": "R63",
+      "lcsc": "C140158",
+      "value": "4.7k"
+    },
+    {
+      "ref": "R64",
+      "lcsc": "C140158",
+      "value": "4.7k"
+    },
+    {
+      "ref": "R65",
+      "lcsc": "C25741",
+      "value": "100k"
+    },
+    {
+      "ref": "LED1",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED2",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED3",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED4",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED5",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED6",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED7",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "LED8",
+      "lcsc": "C965840"
+    },
+    {
+      "ref": "R66",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R67",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R68",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R69",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R70",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R71",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R72",
+      "lcsc": "C54920677",
+      "value": "470R"
+    },
+    {
+      "ref": "R73",
+      "lcsc": "C54920677",
+      "value": "470R"
+    }
+  ],
+  "nets": [
+    {
+      "name": "3V3",
+      "class": "power",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "27"
+        },
+        {
+          "ref": "C56",
+          "pin": "1"
+        },
+        {
+          "ref": "C57",
+          "pin": "1"
+        },
+        {
+          "ref": "R63",
+          "pin": "1"
+        },
+        {
+          "ref": "R64",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "5V_SYS",
+      "class": "power",
+      "members": [
+        {
+          "ref": "FB10",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "5V_LED",
+      "class": "power",
+      "members": [
+        {
+          "ref": "FB10",
+          "pin": "2"
+        },
+        {
+          "ref": "C58",
+          "pin": "1"
+        },
+        {
+          "ref": "R66",
+          "pin": "1"
+        },
+        {
+          "ref": "R67",
+          "pin": "1"
+        },
+        {
+          "ref": "R68",
+          "pin": "1"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "R70",
+          "pin": "1"
+        },
+        {
+          "ref": "R71",
+          "pin": "1"
+        },
+        {
+          "ref": "R72",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "class": "power",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "33"
+        },
+        {
+          "ref": "U7",
+          "pin": "25"
+        },
+        {
+          "ref": "U7",
+          "pin": "26"
+        },
+        {
+          "ref": "C56",
+          "pin": "2"
+        },
+        {
+          "ref": "C57",
+          "pin": "2"
+        },
+        {
+          "ref": "C58",
+          "pin": "2"
+        },
+        {
+          "ref": "R62",
+          "pin": "2"
+        },
+        {
+          "ref": "R65",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "REXT",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "31"
+        },
+        {
+          "ref": "R62",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "I2C4_SCL",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R63",
+          "pin": "2"
+        },
+        {
+          "ref": "U7",
+          "pin": "29"
+        }
+      ]
+    },
+    {
+      "name": "I2C4_SDA",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R64",
+          "pin": "2"
+        },
+        {
+          "ref": "U7",
+          "pin": "28"
+        }
+      ]
+    },
+    {
+      "name": "LED_EN",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R65",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "30"
+        }
+      ]
+    },
+    {
+      "name": "LED1_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "1"
+        },
+        {
+          "ref": "LED1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED1_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "2"
+        },
+        {
+          "ref": "LED1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED1_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "3"
+        },
+        {
+          "ref": "LED1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED1_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R66",
+          "pin": "2"
+        },
+        {
+          "ref": "LED1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED2_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "4"
+        },
+        {
+          "ref": "LED2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED2_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "5"
+        },
+        {
+          "ref": "LED2",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED2_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "6"
+        },
+        {
+          "ref": "LED2",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED2_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R67",
+          "pin": "2"
+        },
+        {
+          "ref": "LED2",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED3_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "7"
+        },
+        {
+          "ref": "LED3",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED3_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "8"
+        },
+        {
+          "ref": "LED3",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED3_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "9"
+        },
+        {
+          "ref": "LED3",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED3_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R68",
+          "pin": "2"
+        },
+        {
+          "ref": "LED3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED4_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "10"
+        },
+        {
+          "ref": "LED4",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED4_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "11"
+        },
+        {
+          "ref": "LED4",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED4_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "12"
+        },
+        {
+          "ref": "LED4",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED4_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R69",
+          "pin": "2"
+        },
+        {
+          "ref": "LED4",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED5_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "13"
+        },
+        {
+          "ref": "LED5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED5_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "LED5",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED5_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "15"
+        },
+        {
+          "ref": "LED5",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED5_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R70",
+          "pin": "2"
+        },
+        {
+          "ref": "LED5",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED6_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "16"
+        },
+        {
+          "ref": "LED6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED6_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "17"
+        },
+        {
+          "ref": "LED6",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED6_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "18"
+        },
+        {
+          "ref": "LED6",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED6_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R71",
+          "pin": "2"
+        },
+        {
+          "ref": "LED6",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED7_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "19"
+        },
+        {
+          "ref": "LED7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED7_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "20"
+        },
+        {
+          "ref": "LED7",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED7_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "21"
+        },
+        {
+          "ref": "LED7",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED7_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R72",
+          "pin": "2"
+        },
+        {
+          "ref": "LED7",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "LED8_R",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "22"
+        },
+        {
+          "ref": "LED8",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED8_G",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "23"
+        },
+        {
+          "ref": "LED8",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "LED8_B",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "U7",
+          "pin": "24"
+        },
+        {
+          "ref": "LED8",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "LED8_A",
+      "class": "signal",
+      "members": [
+        {
+          "ref": "R73",
+          "pin": "2"
+        },
+        {
+          "ref": "LED8",
+          "pin": "2"
+        }
+      ]
+    }
+  ]
+}

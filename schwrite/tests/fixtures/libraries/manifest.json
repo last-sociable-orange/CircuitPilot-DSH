@@ -1,0 +1,1382 @@
+{
+  "CH132B": {
+    "lcsc": "C41416597",
+    "lib_id": "Symbol:IC_CH132B",
+    "symbol_file": "kicad_lib/Symbol/Symbol/IC_CH132B.kicad_sym",
+    "footprint": "Footprint:IC_CH132B",
+    "pins": [
+      {
+        "number": "1",
+        "name": "CLK",
+        "type": "output"
+      },
+      {
+        "number": "2",
+        "name": "NXT",
+        "type": "output"
+      },
+      {
+        "number": "3",
+        "name": "D0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "4",
+        "name": "D1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "5",
+        "name": "D2",
+        "type": "bidirectional"
+      },
+      {
+        "number": "6",
+        "name": "D3",
+        "type": "bidirectional"
+      },
+      {
+        "number": "7",
+        "name": "D4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "8",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "9",
+        "name": "D5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "10",
+        "name": "D6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "11",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "12",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "13",
+        "name": "D7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "14",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "15",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "16",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "17",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "18",
+        "name": "D+",
+        "type": "bidirectional"
+      },
+      {
+        "number": "19",
+        "name": "D-",
+        "type": "bidirectional"
+      },
+      {
+        "number": "20",
+        "name": "VDD33",
+        "type": "power_in"
+      },
+      {
+        "number": "21",
+        "name": "V5",
+        "type": "power_in"
+      },
+      {
+        "number": "22",
+        "name": "VBUS",
+        "type": "power_in"
+      },
+      {
+        "number": "23",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "24",
+        "name": "GND",
+        "type": "power_in"
+      },
+      {
+        "number": "25",
+        "name": "XO",
+        "type": "output"
+      },
+      {
+        "number": "26",
+        "name": "XI",
+        "type": "input"
+      },
+      {
+        "number": "27",
+        "name": "RESET#",
+        "type": "input"
+      },
+      {
+        "number": "28",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "29",
+        "name": "STP",
+        "type": "input"
+      },
+      {
+        "number": "30",
+        "name": "NC.",
+        "type": "passive"
+      },
+      {
+        "number": "31",
+        "name": "DIR",
+        "type": "output"
+      },
+      {
+        "number": "32",
+        "name": "VDDIO",
+        "type": "power_in"
+      },
+      {
+        "number": "33",
+        "name": "GND",
+        "type": "power_in"
+      }
+    ]
+  },
+  "SN74LVC1G125DCKR": {
+    "lcsc": "C7394030",
+    "lib_id": "Symbol:IC_SN74LVC1G125DCKR",
+    "symbol_file": "kicad_lib/Symbol/Symbol/IC_SN74LVC1G125DCKR.kicad_sym",
+    "footprint": "Footprint:IC_SN74LVC1G125DCKR",
+    "pins": [
+      {
+        "number": "1",
+        "name": "OE#",
+        "type": "input"
+      },
+      {
+        "number": "2",
+        "name": "IN A",
+        "type": "input"
+      },
+      {
+        "number": "3",
+        "name": "GND",
+        "type": "power_in"
+      },
+      {
+        "number": "4",
+        "name": "Y",
+        "type": "output"
+      },
+      {
+        "number": "5",
+        "name": "VCC",
+        "type": "power_in"
+      }
+    ]
+  },
+  "AW21024QNR": {
+    "lcsc": "C2891574",
+    "lib_id": "Symbol:IC_AW21024QNR",
+    "symbol_file": "kicad_lib/Symbol/Symbol/IC_AW21024QNR.kicad_sym",
+    "footprint": "Footprint:IC_AW21024QNR",
+    "pins": [
+      {
+        "number": "1",
+        "name": "LED1",
+        "type": "open_collector"
+      },
+      {
+        "number": "2",
+        "name": "LED2",
+        "type": "open_collector"
+      },
+      {
+        "number": "3",
+        "name": "LED3",
+        "type": "open_collector"
+      },
+      {
+        "number": "4",
+        "name": "LED4",
+        "type": "open_collector"
+      },
+      {
+        "number": "5",
+        "name": "LED5",
+        "type": "open_collector"
+      },
+      {
+        "number": "6",
+        "name": "LED6",
+        "type": "open_collector"
+      },
+      {
+        "number": "7",
+        "name": "LED7",
+        "type": "open_collector"
+      },
+      {
+        "number": "8",
+        "name": "LED8",
+        "type": "open_collector"
+      },
+      {
+        "number": "9",
+        "name": "LED9",
+        "type": "open_collector"
+      },
+      {
+        "number": "10",
+        "name": "LED10",
+        "type": "open_collector"
+      },
+      {
+        "number": "11",
+        "name": "LED11",
+        "type": "open_collector"
+      },
+      {
+        "number": "12",
+        "name": "LED12",
+        "type": "open_collector"
+      },
+      {
+        "number": "13",
+        "name": "LED13",
+        "type": "open_collector"
+      },
+      {
+        "number": "14",
+        "name": "LED14",
+        "type": "open_collector"
+      },
+      {
+        "number": "15",
+        "name": "LED15",
+        "type": "open_collector"
+      },
+      {
+        "number": "16",
+        "name": "LED16",
+        "type": "open_collector"
+      },
+      {
+        "number": "17",
+        "name": "LED17",
+        "type": "open_collector"
+      },
+      {
+        "number": "18",
+        "name": "LED18",
+        "type": "open_collector"
+      },
+      {
+        "number": "19",
+        "name": "LED19",
+        "type": "open_collector"
+      },
+      {
+        "number": "20",
+        "name": "LED20",
+        "type": "open_collector"
+      },
+      {
+        "number": "21",
+        "name": "LED21",
+        "type": "open_collector"
+      },
+      {
+        "number": "22",
+        "name": "LED22",
+        "type": "open_collector"
+      },
+      {
+        "number": "23",
+        "name": "LED23",
+        "type": "open_collector"
+      },
+      {
+        "number": "24",
+        "name": "LED24",
+        "type": "open_collector"
+      },
+      {
+        "number": "25",
+        "name": "AD0",
+        "type": "input"
+      },
+      {
+        "number": "26",
+        "name": "AD1",
+        "type": "input"
+      },
+      {
+        "number": "27",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "28",
+        "name": "SDA",
+        "type": "bidirectional"
+      },
+      {
+        "number": "29",
+        "name": "SCL",
+        "type": "input"
+      },
+      {
+        "number": "30",
+        "name": "EN",
+        "type": "input"
+      },
+      {
+        "number": "31",
+        "name": "ISET",
+        "type": "passive"
+      },
+      {
+        "number": "32",
+        "name": "NC",
+        "type": "passive"
+      },
+      {
+        "number": "33",
+        "name": "GND",
+        "type": "power_in"
+      }
+    ]
+  },
+  "SX32Y025000BA1T001": {
+    "lcsc": "C20612972",
+    "lib_id": "Symbol:XTAL_SX32Y025000BA1T001",
+    "symbol_file": "kicad_lib/Symbol/Symbol/XTAL_SX32Y025000BA1T001.kicad_sym",
+    "footprint": "Footprint:XTAL_SX32Y025000BA1T001",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "3",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "GND",
+        "type": "passive"
+      }
+    ]
+  },
+  "XL-1615SURUGC": {
+    "lcsc": "C965839",
+    "lib_id": "Symbol:D_XL-1615SURUGC",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_XL-1615SURUGC.kicad_sym",
+    "footprint": "Footprint:D_XL-1615SURUGC",
+    "pins": [
+      {
+        "number": "1",
+        "name": "R-",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "G-",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "G+",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "R+",
+        "type": "passive"
+      }
+    ]
+  },
+  "XL-1615RGBC-RF": {
+    "lcsc": "C965840",
+    "lib_id": "Symbol:D_XL-1615RGBC-RF",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_XL-1615RGBC-RF.kicad_sym",
+    "footprint": "Footprint:D_XL-1615RGBC-RF",
+    "pins": [
+      {
+        "number": "1",
+        "name": "R-",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "COM+",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "G-",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "B-",
+        "type": "passive"
+      }
+    ]
+  },
+  "D5V0F4U6SO-7": {
+    "lcsc": "C19723969",
+    "lib_id": "Symbol:D_D5V0F4U6SO-7",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_D5V0F4U6SO-7.kicad_sym",
+    "footprint": "Footprint:D_D5V0F4U6SO-7",
+    "pins": [
+      {
+        "number": "1",
+        "name": "CH1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "type": "power_in"
+      },
+      {
+        "number": "3",
+        "name": "CH2",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "CH3",
+        "type": "passive"
+      },
+      {
+        "number": "5",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "6",
+        "name": "CH4",
+        "type": "passive"
+      }
+    ]
+  },
+  "SRV05-4": {
+    "lcsc": "C558418",
+    "lib_id": "Symbol:D_SRV05-4",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_SRV05-4.kicad_sym",
+    "footprint": "Footprint:D_SRV05-4",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "3",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "4",
+        "type": "passive"
+      },
+      {
+        "number": "5",
+        "name": "5",
+        "type": "passive"
+      },
+      {
+        "number": "6",
+        "name": "6",
+        "type": "passive"
+      }
+    ]
+  },
+  "ES06D1HA03": {
+    "lcsc": "C5137779",
+    "lib_id": "Symbol:D_ES06D1HA03",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_ES06D1HA03.kicad_sym",
+    "footprint": "Footprint:D_ES06D1HA03",
+    "pins": [
+      {
+        "number": "1",
+        "name": "K",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "A",
+        "type": "passive"
+      }
+    ]
+  },
+  "TYPE-C 16P CB0.8 073": {
+    "lcsc": "C2906289",
+    "lib_id": "Symbol:CON_TYPE-C-16P",
+    "symbol_file": "kicad_lib/Symbol/Symbol/CON_TYPE-C-16P.kicad_sym",
+    "footprint": "Footprint:CON_TYPE-C-16P",
+    "pins": [
+      {
+        "number": "A1B12",
+        "name": "GND",
+        "type": "passive"
+      },
+      {
+        "number": "A4B9",
+        "name": "VBUS",
+        "type": "passive"
+      },
+      {
+        "number": "B8",
+        "name": "SUB2",
+        "type": "passive"
+      },
+      {
+        "number": "A5",
+        "name": "CC1",
+        "type": "passive"
+      },
+      {
+        "number": "B7",
+        "name": "DN2",
+        "type": "passive"
+      },
+      {
+        "number": "A6",
+        "name": "DP1",
+        "type": "passive"
+      },
+      {
+        "number": "A7",
+        "name": "DN1",
+        "type": "passive"
+      },
+      {
+        "number": "B6",
+        "name": "DP2",
+        "type": "passive"
+      },
+      {
+        "number": "A8",
+        "name": "SUB1",
+        "type": "passive"
+      },
+      {
+        "number": "B5",
+        "name": "CC2",
+        "type": "passive"
+      },
+      {
+        "number": "B4A9",
+        "name": "VBUS",
+        "type": "passive"
+      },
+      {
+        "number": "B1A12",
+        "name": "GND",
+        "type": "passive"
+      },
+      {
+        "number": "0",
+        "name": "0",
+        "type": "passive"
+      }
+    ]
+  },
+  "GH1.25mm-3P-WT": {
+    "lcsc": "C53055380",
+    "lib_id": "Symbol:CON_GH1.25-3P",
+    "symbol_file": "kicad_lib/Symbol/Symbol/CON_GH1.25-3P.kicad_sym",
+    "footprint": "Footprint:CON_GH1.25-3P",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "3",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "4",
+        "type": "passive"
+      },
+      {
+        "number": "5",
+        "name": "5",
+        "type": "passive"
+      }
+    ]
+  },
+  "HC-0.6-5PWT": {
+    "lcsc": "C53151845",
+    "lib_id": "Symbol:CON_HC-0.6-5PWT",
+    "symbol_file": "kicad_lib/Symbol/Symbol/CON_HC-0.6-5PWT.kicad_sym",
+    "footprint": "Footprint:CON_HC-0.6-5PWT",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "3",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "4",
+        "type": "passive"
+      },
+      {
+        "number": "5",
+        "name": "5",
+        "type": "passive"
+      },
+      {
+        "number": "6",
+        "name": "6",
+        "type": "passive"
+      },
+      {
+        "number": "7",
+        "name": "7",
+        "type": "passive"
+      }
+    ]
+  },
+  "MPZ2012S601AT000": {
+    "lcsc": "C21519",
+    "lib_id": "Symbol:FB_MPZ2012S601AT000",
+    "symbol_file": "kicad_lib/Symbol/Symbol/FB_MPZ2012S601AT000.kicad_sym",
+    "footprint": "Footprint:FB_MPZ2012S601AT000",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      }
+    ]
+  },
+  "MPZ1608S601ATA00": {
+    "lcsc": "C107335",
+    "lib_id": "Symbol:FB_MPZ1608S601ATA00",
+    "symbol_file": "kicad_lib/Symbol/Symbol/FB_MPZ1608S601ATA00.kicad_sym",
+    "footprint": "Footprint:FB_MPZ1608S601ATA00",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      }
+    ]
+  },
+  "STM32H743VGT6": {
+    "lcsc": "C730183",
+    "lib_id": "Symbol:IC_STM32H743VGT6",
+    "symbol_file": "kicad_lib/Symbol/Symbol/IC_STM32H743VGT6.kicad_sym",
+    "footprint": "Footprint:IC_STM32H743VGT6",
+    "pins": [
+      {
+        "number": "1",
+        "name": "PE2",
+        "type": "bidirectional"
+      },
+      {
+        "number": "2",
+        "name": "PE3",
+        "type": "bidirectional"
+      },
+      {
+        "number": "3",
+        "name": "PE4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "4",
+        "name": "PE5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "5",
+        "name": "PE6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "6",
+        "name": "VBAT",
+        "type": "power_in"
+      },
+      {
+        "number": "7",
+        "name": "PC13",
+        "type": "bidirectional"
+      },
+      {
+        "number": "8",
+        "name": "PC14-OSC32_IN",
+        "type": "bidirectional"
+      },
+      {
+        "number": "9",
+        "name": "PC15-OSC32_OUT",
+        "type": "bidirectional"
+      },
+      {
+        "number": "10",
+        "name": "VSS",
+        "type": "power_in"
+      },
+      {
+        "number": "11",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "12",
+        "name": "PH0-OSC_IN",
+        "type": "bidirectional"
+      },
+      {
+        "number": "13",
+        "name": "PH1-OSC_OUT",
+        "type": "bidirectional"
+      },
+      {
+        "number": "14",
+        "name": "NRST",
+        "type": "input"
+      },
+      {
+        "number": "15",
+        "name": "PC0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "16",
+        "name": "PC1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "17",
+        "name": "PC2_C",
+        "type": "bidirectional"
+      },
+      {
+        "number": "18",
+        "name": "PC3_C",
+        "type": "bidirectional"
+      },
+      {
+        "number": "19",
+        "name": "VSSA",
+        "type": "power_in"
+      },
+      {
+        "number": "20",
+        "name": "VREF+",
+        "type": "power_in"
+      },
+      {
+        "number": "21",
+        "name": "VDDA",
+        "type": "power_in"
+      },
+      {
+        "number": "22",
+        "name": "PA0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "23",
+        "name": "PA1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "24",
+        "name": "PA2",
+        "type": "bidirectional"
+      },
+      {
+        "number": "25",
+        "name": "PA3",
+        "type": "bidirectional"
+      },
+      {
+        "number": "26",
+        "name": "VSS",
+        "type": "power_in"
+      },
+      {
+        "number": "27",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "28",
+        "name": "PA4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "29",
+        "name": "PA5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "30",
+        "name": "PA6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "31",
+        "name": "PA7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "32",
+        "name": "PC4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "33",
+        "name": "PC5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "34",
+        "name": "PB0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "35",
+        "name": "PB1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "36",
+        "name": "PB2",
+        "type": "bidirectional"
+      },
+      {
+        "number": "37",
+        "name": "PE7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "38",
+        "name": "PE8",
+        "type": "bidirectional"
+      },
+      {
+        "number": "39",
+        "name": "PE9",
+        "type": "bidirectional"
+      },
+      {
+        "number": "40",
+        "name": "PE10",
+        "type": "bidirectional"
+      },
+      {
+        "number": "41",
+        "name": "PE11",
+        "type": "bidirectional"
+      },
+      {
+        "number": "42",
+        "name": "PE12",
+        "type": "bidirectional"
+      },
+      {
+        "number": "43",
+        "name": "PE13",
+        "type": "bidirectional"
+      },
+      {
+        "number": "44",
+        "name": "PE14",
+        "type": "bidirectional"
+      },
+      {
+        "number": "45",
+        "name": "PE15",
+        "type": "bidirectional"
+      },
+      {
+        "number": "46",
+        "name": "PB10",
+        "type": "bidirectional"
+      },
+      {
+        "number": "47",
+        "name": "PB11",
+        "type": "bidirectional"
+      },
+      {
+        "number": "48",
+        "name": "VCAP",
+        "type": "power_in"
+      },
+      {
+        "number": "49",
+        "name": "VSS",
+        "type": "power_in"
+      },
+      {
+        "number": "50",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "51",
+        "name": "PB12",
+        "type": "bidirectional"
+      },
+      {
+        "number": "52",
+        "name": "PB13",
+        "type": "bidirectional"
+      },
+      {
+        "number": "53",
+        "name": "PB14",
+        "type": "bidirectional"
+      },
+      {
+        "number": "54",
+        "name": "PB15",
+        "type": "bidirectional"
+      },
+      {
+        "number": "55",
+        "name": "PD8",
+        "type": "bidirectional"
+      },
+      {
+        "number": "56",
+        "name": "PD9",
+        "type": "bidirectional"
+      },
+      {
+        "number": "57",
+        "name": "PD10",
+        "type": "bidirectional"
+      },
+      {
+        "number": "58",
+        "name": "PD11",
+        "type": "bidirectional"
+      },
+      {
+        "number": "59",
+        "name": "PD12",
+        "type": "bidirectional"
+      },
+      {
+        "number": "60",
+        "name": "PD13",
+        "type": "bidirectional"
+      },
+      {
+        "number": "61",
+        "name": "PD14",
+        "type": "bidirectional"
+      },
+      {
+        "number": "62",
+        "name": "PD15",
+        "type": "bidirectional"
+      },
+      {
+        "number": "63",
+        "name": "PC6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "64",
+        "name": "PC7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "65",
+        "name": "PC8",
+        "type": "bidirectional"
+      },
+      {
+        "number": "66",
+        "name": "PC9",
+        "type": "bidirectional"
+      },
+      {
+        "number": "67",
+        "name": "PA8",
+        "type": "bidirectional"
+      },
+      {
+        "number": "68",
+        "name": "PA9",
+        "type": "bidirectional"
+      },
+      {
+        "number": "69",
+        "name": "PA10",
+        "type": "bidirectional"
+      },
+      {
+        "number": "70",
+        "name": "PA11",
+        "type": "bidirectional"
+      },
+      {
+        "number": "71",
+        "name": "PA12",
+        "type": "bidirectional"
+      },
+      {
+        "number": "72",
+        "name": "PA13",
+        "type": "bidirectional"
+      },
+      {
+        "number": "73",
+        "name": "VCAP",
+        "type": "power_in"
+      },
+      {
+        "number": "74",
+        "name": "VSS",
+        "type": "power_in"
+      },
+      {
+        "number": "75",
+        "name": "VDD",
+        "type": "power_in"
+      },
+      {
+        "number": "76",
+        "name": "PA14",
+        "type": "bidirectional"
+      },
+      {
+        "number": "77",
+        "name": "PA15",
+        "type": "bidirectional"
+      },
+      {
+        "number": "78",
+        "name": "PC10",
+        "type": "bidirectional"
+      },
+      {
+        "number": "79",
+        "name": "PC11",
+        "type": "bidirectional"
+      },
+      {
+        "number": "80",
+        "name": "PC12",
+        "type": "bidirectional"
+      },
+      {
+        "number": "81",
+        "name": "PD0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "82",
+        "name": "PD1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "83",
+        "name": "PD2",
+        "type": "bidirectional"
+      },
+      {
+        "number": "84",
+        "name": "PD3",
+        "type": "bidirectional"
+      },
+      {
+        "number": "85",
+        "name": "PD4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "86",
+        "name": "PD5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "87",
+        "name": "PD6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "88",
+        "name": "PD7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "89",
+        "name": "PB3",
+        "type": "bidirectional"
+      },
+      {
+        "number": "90",
+        "name": "PB4",
+        "type": "bidirectional"
+      },
+      {
+        "number": "91",
+        "name": "PB5",
+        "type": "bidirectional"
+      },
+      {
+        "number": "92",
+        "name": "PB6",
+        "type": "bidirectional"
+      },
+      {
+        "number": "93",
+        "name": "PB7",
+        "type": "bidirectional"
+      },
+      {
+        "number": "94",
+        "name": "BOOT0",
+        "type": "input"
+      },
+      {
+        "number": "95",
+        "name": "PB8",
+        "type": "bidirectional"
+      },
+      {
+        "number": "96",
+        "name": "PB9",
+        "type": "bidirectional"
+      },
+      {
+        "number": "97",
+        "name": "PE0",
+        "type": "bidirectional"
+      },
+      {
+        "number": "98",
+        "name": "PE1",
+        "type": "bidirectional"
+      },
+      {
+        "number": "99",
+        "name": "VSS",
+        "type": "power_in"
+      },
+      {
+        "number": "100",
+        "name": "VDD",
+        "type": "power_in"
+      }
+    ]
+  },
+  "TPP053010-S56R": {
+    "lcsc": "C53368594",
+    "lib_id": "Symbol:IC_TPP053010-S56R",
+    "symbol_file": "kicad_lib/Symbol/Symbol/IC_TPP053010-S56R.kicad_sym",
+    "footprint": "Footprint:IC_TPP053010-S56R",
+    "pins": [
+      {
+        "number": "1",
+        "name": "GND",
+        "type": "power_in"
+      },
+      {
+        "number": "2",
+        "name": "SW",
+        "type": "output"
+      },
+      {
+        "number": "3",
+        "name": "VIN",
+        "type": "power_in"
+      },
+      {
+        "number": "4",
+        "name": "EN",
+        "type": "input"
+      },
+      {
+        "number": "5",
+        "name": "FB",
+        "type": "input"
+      },
+      {
+        "number": "6",
+        "name": "PG",
+        "type": "open_collector"
+      }
+    ]
+  },
+  "SY6280AAC": {
+    "lcsc": "C55136",
+    "lib_id": "Symbol:SW_SY6280AAC",
+    "symbol_file": "kicad_lib/Symbol/Symbol/SW_SY6280AAC.kicad_sym",
+    "footprint": "Footprint:SW_SY6280AAC",
+    "pins": [
+      {
+        "number": "1",
+        "name": "OUT",
+        "type": "power_out"
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "type": "power_in"
+      },
+      {
+        "number": "3",
+        "name": "ISET",
+        "type": "passive"
+      },
+      {
+        "number": "4",
+        "name": "EN",
+        "type": "input"
+      },
+      {
+        "number": "5",
+        "name": "IN",
+        "type": "power_in"
+      }
+    ]
+  },
+  "AO3401A": {
+    "lcsc": "C347476",
+    "lib_id": "Symbol:Q_AO3401A",
+    "symbol_file": "kicad_lib/Symbol/Symbol/Q_AO3401A.kicad_sym",
+    "footprint": "Footprint:Q_AO3401A",
+    "pins": [
+      {
+        "number": "1",
+        "name": "G",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "S",
+        "type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "D",
+        "type": "passive"
+      }
+    ]
+  },
+  "JK-nSMD050-30": {
+    "lcsc": "C720075",
+    "lib_id": "Symbol:F_JK-nSMD050-30",
+    "symbol_file": "kicad_lib/Symbol/Symbol/F_JK-nSMD050-30.kicad_sym",
+    "footprint": "Footprint:F_JK-nSMD050-30",
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "type": "passive"
+      }
+    ]
+  },
+  "SMBJ6.0A": {
+    "lcsc": "C113976",
+    "lib_id": "Symbol:D_SMBJ6.0A",
+    "symbol_file": "kicad_lib/Symbol/Symbol/D_SMBJ6.0A.kicad_sym",
+    "footprint": "Footprint:D_SMBJ6.0A",
+    "pins": [
+      {
+        "number": "1",
+        "name": "C",
+        "type": "passive"
+      },
+      {
+        "number": "2",
+        "name": "A",
+        "type": "passive"
+      }
+    ]
+  }
+}

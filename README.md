@@ -63,6 +63,17 @@ A delegated sub-agent reads its role from `<project>/.dsh/agents/<role>.md`, so 
 Markdown file there — plus a `<role>` entry in the lead's `AGENTS.md` table (which file to name) and,
 for a new tool, one more `tool-subagent` row. Nothing in the composition defines what a role *is*.
 
+### schwrite — netlist to schematic page
+
+`dsh/skills/schwrite/` turns a designer netlist JSON into a KiCad 10 page and proves it with
+KiCad's own read-back and ERC. The folder is self-contained: `python run.py build|verify|erc`
+works with any Python 3.10+ and no packages at all. `verify` and `erc` need `kicad-cli` from a
+KiCad 8+ install.
+
+The code is developed in `schwrite/` (package, 120 tests, docs) and frozen into the skill by
+`python schwrite/tools/sync_skill.py`; `--check` fails when the copy drifts, and the test suite
+runs that check. Never edit `dsh/skills/schwrite/src/` by hand.
+
 ### Where skills live
 
 Global skills live in `~/.dsh/skills/` , project based skills live in `<project>/.dsh/skills/`
@@ -117,5 +128,7 @@ $env:ELECTRON_RUN_AS_NODE = '1'
 circuitpilot/           the installed bundle (patch + package.json + index.js)
 dsh/agents/             role definitions copied into each hardware project
 dsh/skills/             project skills copied into each hardware project
+  schwrite/             netlist -> KiCad page, self-contained (run.py + src/), no installs
+schwrite/               the generator's upstream source: package, tests, docs, sync tool
 tools/validate-patch.mjs
 ```
